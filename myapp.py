@@ -5,7 +5,6 @@ import plotly.data as pldata
 df = pldata.gapminder()
 
 app = Dash(__name__)
-server = app.server  # For Render deployment
 
 app.layout = html.Div([
     html.H1("GDP Per Capita Over Time by Country"),
@@ -34,3 +33,5 @@ def update_graph(selected_country):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+server = app.server
